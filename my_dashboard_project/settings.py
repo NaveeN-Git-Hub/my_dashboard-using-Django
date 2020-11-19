@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-#import django_heroku
-#import dj_database_url
+import django_heroku
+import dj_database_url
 from decouple import config  # to set the secrete values in .env file
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'my_dashboard_project.urls'
@@ -131,7 +132,7 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = 'staticfiles'
 #STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # To upload images
 
 MEDIA_URL = '/media/' # folder name where you want to store the uploaded images
@@ -153,4 +154,4 @@ EMAIL_USE_TLS = True
 #EMAIL_USE_SSL = False
 
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
