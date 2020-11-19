@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- <title>Responsive Sidebar Menu</title> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Title -->
+    <title>{% block title %}My DashBoard{% endblock %}</title>
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static 'my_dashboard_app/css/style.css' %}">
+
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>NaveeN's</header>
+      <a href="{% url 'base' %}" class="active">
+        <i class="fas fa-qrcode"></i> <!-- For these icons...Refer https://fontawesome.com/ and get the class and paste here -->
+        <span>Dashboard</span>
+      </a>
+      <a href="{% url 'profile' %}">
+        <i class="far fa-file"></i>
+        <span>Web CV Generator</span>
+      </a>
+      <a href="https://www.youtube.com/watch?v=QsIfojo1b0c&list=PLKGeBXqLitMZdxvRq_vklyVJpih2DVSOA&index=1&t=4s" target="_blank">
+        <i class="fab fa-python"></i>
+        <span>Learn Python</span>
+      </a>
+      <a href="http://naveennetwork.com/" target="_blank">
+        <i class="fas fa-network-wired"></i>
+        <span>Network Automation</span>
+      </a>
+      <a href="#">
+        <i class="fas fa-network-wired"></i>
+        <span>Web Development</span>
+      </a>
+      <a href="{% url 'about' %}">
+        <i class="far fa-question-circle"></i>
+        <span>About Me</span>
+      </a>
+    </div>
+
+
+
+{% block content %}
+
+<style type="text/css">
+
+  .web_cv_generator_app{
+      border: 1px; 
+      border-radius: 16px;
+      background-color: #00bfff;
+      margin-top: 5%; 
+      margin-left: 25%;
+      margin-right: 50%;
+      width: 20%;
+      padding: 40px;
+      font-family: "Lucida Console", Courier, monospace;
+      position: fixed;
+  }
+
+
+  .Learn_Python_Completely{
+      border: 1px; 
+      border-radius: 16px;
+      background-color: #00bfff;
+      margin-top: 5%; 
+      margin-left: 62%;
+      width: 22%;
+      padding: 25px;
+      font-family: "Lucida Console", Courier, monospace;
+      position: fixed;
+      object-fit: cover;
+  }
+  .Web_Development{
+      border: 1px; 
+      border-radius: 16px;
+      background-color: #00bfff;
+      margin-top: 25%; 
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 20%;
+      padding: 40px;
+      font-family: "Lucida Console", Courier, monospace;
+      position: fixed;
+  }
+  .Network_Automation{
+      border: 1px; 
+      border-radius: 16px;
+      background-color: #00bfff;
+      margin-top: 25%; 
+      margin-left: 62%;
+      width: 22%;
+      padding: 25px;
+      font-family: "Lucida Console", Courier, monospace;
+      position: fixed;
+  }
+  
+  h2 {
+    color: white;
+  }
+  h4 {
+    color: green;
+  }
+  a:hover{
+    color: white;
+    background-color: #00bfff;
+  }
+  .lhtml{
+    position: absolute;
+    top: 120px;
+    left: 20px;
+  }
+  .lcss{
+    position: absolute;
+    top: 120px;
+    left: 240px;
+  }
+  .sample{
+    position: absolute;
+    top: 190px;
+    left: 35px;
+  }
+
+</style>
+
+<div class="web_cv_generator_app">
+  <center><a href="{% url 'profile' %}"><h2>Web CV Generator</h2></a></center>
+  <br>
+  <center><h4>Create Beautiful, Professional Resumes in minutes</h4></center>
+  <br>
+  <center><a href="{% static 'web_cv_generator_app/images/sample_cv.pdf' %}">View Sample CV</a></center>
+</div>
+
+<div class="Learn_Python_Completely">
+  <center><a href="https://www.youtube.com/watch?v=QsIfojo1b0c&list=PLKGeBXqLitMZdxvRq_vklyVJpih2DVSOA&index=1&t=4s"><h2>Learn Python Completely</h2></a></center><br>
+  <center><a href="https://www.youtube.com/watch?v=QsIfojo1b0c&list=PLKGeBXqLitMZdxvRq_vklyVJpih2DVSOA&index=1&t=4s"><img src="{% static 'web_cv_generator_app/images/download.png' %}"></a></center>
+  
+</div>
+<div class="Web_Development">
+  <center><h2>Web Development</h2></center>
+  <br>
+  <center><img src="{% static 'web_development/images/web_development_logo.jpg' %}"></center>
+  <a href="{% url 'learn_html' %}"><h4 class="lhtml">Learn HTML</h4></a>
+  <a href="{% url 'learn_css' %}"><h4 class="lcss">Learn CSS</h4></a>
+  <a href="{% url 'sample_webpage' %}"><h4 class="sample">Sample Website with html & css</h4></a>
+</div>
+<div class="Network_Automation">
+  <center><a href="https://naveennetwork.com/"><h2>Network Automation</h2></a></center>
+  <br>
+  <center><a href="https://naveennetwork.com/"><img src="{% static 'web_cv_generator_app/images/nnetwork.PNG' %}"></a></center>
+</div>
+
+{% endblock %}
+
+
+</body>
+</html>

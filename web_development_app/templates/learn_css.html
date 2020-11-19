@@ -1,0 +1,86 @@
+<center><strong>Note:</strong> To View the HTML File, Right Click on WebPage + Save as HTML <br>
+To View the CSS file 
+<a href="{%url 'view_css' %}">Click here</a>
+</center>
+
+{% load static %} <!-- This is Load the static files in Django -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn CSS!</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'web_development/css/style.css' %}">
+</head>
+<body>
+	<h2>Hello</h2><br>
+	<p>
+		Network automation is the process of automating the configuration, management, operation & testing of physical and virtual devices within a network. With growing costs, complexity of networks and the daily emergence of bandwidth-hungry applications, networks cannot be managed manually. Multiple touch points, remote operations result in delays affecting critical business initiatives.
+	</p>
+	<br>
+	<hr>
+	<div class="container">
+		<div class="box-1">
+			<p>
+				In traditional network devices, both the control plane and data forwarding plane need to be programmed individually. If changes in existing configurations are warranted then the administrator has to re-configure the control plane in all the relevant devices, by using the command-line interface of the device OS. This is a resource-intensive process, and prone to errors. Moreover, as long as the control plane is confined to individual devices, 
+			</p>
+		</div>
+	</div>
+	<div class="box-2">
+		<h1>sdn start</h1>
+		<p>
+			In traditional network devices, both the control plane and data forwarding plane need to be programmed individually. If changes in existing configurations are warranted then the administrator has to re-configure the control plane in all the relevant devices, by using the command-line interface of the device OS. This is a resource-intensive process, and prone to errors.
+		</p>
+		<h1>sdn end</h1>
+		<br>
+	</div>
+	<div class="categories">
+		<h2>Categories</h2>
+		<ul>
+			<li><a href="http://naveennetwork.com/why-network-automation/" target="_blank">SDN-Link</a></li>
+			<li><a href="http://naveennetwork.com" target="_blank">Protocol testing Link</a></li>
+			<li><a href="https://naveennetwork.com/about/" target="_blank">About me Link</a></li>
+			<li><a href="https://naveennetwork.com/contact/" target="_blank">Contact me Linkk</a></li>
+		</ul>
+	</div>
+	<!-- Start of Form -->
+	<div class="container-for-form">
+		<form class="student-form">
+			<div class="form-group">
+				<label>Name </label>
+				<input type="text" name="name">
+			</div>
+			<div class="form-group">
+				<label>Email </label>
+				<input type="text" name="Email">
+			</div>
+			<div class="form-group">
+				<label>Message </label>
+				<textarea name="message"></textarea>
+			</div>
+			<input type="submit" name="submit" value="Submit">
+		</form>
+	</div> <!-- End of Form -->
+	<!-- Blocks -->
+	<div class="main-block">
+		<div class="block">
+			<h3>Heading-1</h3>
+			<p>In traditional network devices, both the control plane and data forwarding plane need to be programmed individually. If changes in existing configurations are warranted then the administrator has to re-configure the control plane in all the relevant </p>
+		</div>
+			<div class="block">
+			<h3>Heading-2</h3>
+			<p>Control plane and data forwarding plane need to be programmed individually. If changes in existing configurations are warranted then the administrator has to re-configure the control plane in all the relevant </p>
+		</div>
+			<div class="block">
+			<h3>Heading-3</h3>
+			<p>Data forwarding plane need to be programmed individually. If changes in existing configurations are warranted then the administrator has to re-configure the control plane in all the relevant </p>
+		</div>
+	</div>
+	<div class="clr"></div>
+	<div class="box-heading">
+		<h2>Heading-1</h2>
+		<h3>Heading-2</h3>
+	</div>
+	<a class="fix-me-button" href="https://www.linkedin.com/in/nani">Linkedin</a>
+	<div style="margin-top: 50%;"></div>
+</body>
+</html>

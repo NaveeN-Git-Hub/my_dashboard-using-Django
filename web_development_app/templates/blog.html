@@ -1,0 +1,54 @@
+<center><strong>Note:</strong> To View the HTML File, Right Click on WebPage + Save as HTML</center>
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>NaveeN's Website</title> <!-- Tab Name -->
+	<!-- Google will Look at this meta when it scans this Website  -->
+	<meta name="description" content="This is Just Blog of Posts by NaveeN"> 
+	<meta name="keywords" content="Network automation blog, Protocol Testing Blog, Python Scripting Blog">
+</head>
+<body>
+	<header id="main-header">
+		<a href="{% url 'learn_html'%}" target="_blank">Learn HTML</a>
+		<h2>My Website</h2>
+	</header>
+	<section>
+		<article class="post">
+			<h3>Blog-Network Automation</h3>
+			<small>Posted by NaveeN on January 2020</small>
+			<p>Network automation is the process of automating the configuration, management, operation & testing of physical and virtual devices within a network. With growing costs, complexity of networks and the daily emergence of bandwidth-hungry applications, networks cannot be managed manually. Multiple touch points, remote operations result in delays affecting critical business initiatives.<a href="http://naveennetwork.com/why-network-automation/" target="_blank">Read More</a></p>
+		</article>
+		<article class="post">
+			<h3>Blog-Protocol Testing Automation</h3>
+			<small>Posted by NaveeN on Febraury 2020</small>
+			<p>Protocol testing is a generic term used by companies for testing of different protocols in the domains of Routing, Switching, Wireless, Security, Telecom etc. Product companies like Cisco, Juniper, Nortel, etc have networking devices like routers, Switches, Modems, Wireless access-points, Firewalls, etc which are used for different protocols to communicate to exchange routing information. <a href="http://naveennetwork.com/why-protocol-testing-automation-with-python/" target="_blank">Read More</a></p>
+		</article>
+		<article class="post">
+			<h3>Blog-Remote Login using Python</h3>
+			<small>Posted by NaveeN on March 2020</small>
+			<p>Telnet is a simple, text-based and type of client-server network protocol that is used for accessing remote computers over TCP/IP networks like the Internet. In order to connect to the server, people only needed access to a terminal, which could be the simplest and cheapest computer available. Telnet runs on port 23 <a href="http://naveennetwork.com/how-to-remote-login-using-python-telnet/" target="_blank">Read More</a></p>
+		</article>
+	</section>
+
+	<!-- <aside> tag with css can only be possible to put in side bar -->
+	<aside>
+		<h3>Categories</h3>
+		<nav>
+			<ul>
+				<li><a href="http://naveennetwork.com/" target="_blank">Category-1</a></li>
+				<li><a href="http://naveennetwork.com/why-protocol-testing-automation-with-python/" target=_blank>Category-2</a></li>
+				<li><a href="http://naveennetwork.com/how-to-parse-output-from-remote-device/" target="_blank">Category-3</a></li>
+			</ul>
+		</nav>
+	</aside>
+
+	<hr>
+
+	<!-- Footer -->
+	<footer id="main-footer">
+		<p>CopyRight &copy; 2020, My Website</p>
+	</footer>
+
+
+</body>
+</html>

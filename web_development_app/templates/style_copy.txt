@@ -1,0 +1,184 @@
+.clr{
+	clear: both;
+}
+
+body {
+	background-color: lightgrey; /* Background color */
+	color: black;   /* Color of Text */
+		
+	font-family: Comic Sans MS, cursive, sans-serif;  /* These are web safe fonts..which changes the font style */
+	font-size:18px;
+	font-weight: normal; /* normal/bold/400px */ 
+
+
+	/* Same as above font styles in a single line 
+	font: normal 18px Comic Sans MS, cursive, sans-serif; */
+
+	line-height: 1.6em /* space between lines */
+
+	margin:0; /* removes spaces after end line */
+}
+
+
+.box-1 {  /*  Class can called with dot followed by class name */
+	background-color: azure;
+	color: burlywood;
+
+	
+	border-right: 5px red solid;
+	border-left: 5px red solid;
+	border-top: 5px red solid;
+	border-bottom: 5px red solid;
+
+	/* Same as above 
+	border: 5px red solid */
+
+	/* also for dotted 
+	border: 5px red dotted; */
+
+	/* set bottom width only */
+	border-bottom-width:10px;
+
+
+	padding-top: 20px; /* padding is spaces inside borders */
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+
+	/* Same as above 
+	padding:20px; */
+
+	/* Space of 20px above border ie at top  */
+	margin-top: 20px; 
+	/* for all sides */
+	margin: 20px;
+
+	/* So margin is Spaces outside the borders
+		  padding is Spaces inside the borders */
+}
+
+
+a{     /* This will apply to all links..global */
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover{
+	color: red;
+}
+
+a:active{
+	color: green;
+}
+
+
+.container {
+	width: 80%; /*side width */
+	margin: auto; /* Keep auto always as it adjusts width for both sides */
+}
+
+
+.box-2 h1{
+	font-family: Tahoma;
+	font-weight: normal;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: uppercase;
+	text-transform: capitalize;
+	letter-spacing: 0.2em;
+	word-spacing: 1em;
+}
+
+.box-2 {
+	width: 80%;
+	margin: auto;
+	border:3px dotted #333;
+	padding: 30px;
+}
+
+/*
+.categories {
+	width-left:20px;
+	margin-left: 1000px;
+	padding-left: 20px;
+}
+*/
+
+.categories h2{
+	text-align: center;
+}
+
+.categories ul{
+	list-style: square;
+	list-style: none;
+	text-align: center;
+}
+
+.categories li{
+	padding-bottom: 6px;
+	border-bottom:dotted 1px #333;
+}
+
+
+.student-form{
+	padding: 20px;
+}
+
+.student-form .form-group{
+	padding-bottom: 10px;
+}
+
+.student-form label{
+	 display: block;  /*every line in form put it in new line  */
+}
+
+.student-form input[type="text"], .student-form textarea{
+	padding:4px;
+	width: 22%;
+}
+
+.student-form input[type='submit']{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-top: 25px;
+	width:6%;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: red;
+	color: orange;
+	border: none;
+}
+
+.main-block{
+	width: 80%;
+	margin:auto;
+}
+
+.block{
+	float: left;
+	width: 33.3%;
+	border:4px solid #ccc;
+	box-sizing: border-box;
+}
+
+.box-heading{
+	position: relative;
+	background-image:url("bgimage1.jpg");
+}
+
+.box-heading h2{
+	position: absolute;
+	top:80px;
+	left: 800px;
+}
+
+.box-heading h3{
+	position: absolute;
+	top:40px;
+	left: 500px;
+}
+
+.fix-me-button {  /* social button link 400px from top fixed  */
+	position: fixed;
+	top: 400px;
+}

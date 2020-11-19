@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Me{% endblock %}
+
+
+{% block content %}
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>About Me</title>
+
+    <!-- Bootstrap CSS  -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'my_dashboard_app/css/bootstrap.min.css' %}" >
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="{% static 'my_dashboard_app/css/font-awesome.min.css' %}">
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'my_dashboard_app/css/simple-line-icons.css' %}">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="{% static 'my_dashboard_app/css/slicknav.css' %}">
+    <!-- Menu CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'my_dashboard_app/css/menu_sideslide.css' %}">
+    <!-- Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'my_dashboard_app/css/slide-style.css' %}">
+    <!-- Nivo Lightbox -->
+    <link rel="stylesheet" type="text/css" href="{% static 'my_dashboard_app/css/nivo-lightbox.css' %}" >
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="{% static 'my_dashboard_app/css/animate.css' %}">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'my_dashboard_app/css/main.css' %}">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'my_dashboard_app/css/responsive.css' %}">
+
+  </head>
+  
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button> 
+            <a href="https://naveennetwork.com/" target="_blank" class="navbar-brand"><img src="{% static 'my_dashboard_app/img/logo.png' %}" alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'base' %}">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">
+                  About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Start -->
+        <ul class="onepage-nev mobile-menu">
+          <li>
+            <a href="{% url 'base' %}">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'about' %}">About</a>
+          </li>
+          <li>
+            <a href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>
+        <!-- Mobile Menu End -->
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Hero Area Start -->
+      <div id="hero-area" class="hero-area-bg">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">
+              <div class="contents">
+                <h5 class="script-font wow fadeInUp" data-wow-delay="0.2s">Hi This is</h5>
+                <h4 class="head-title wow fadeInUp" data-wow-delay="0.4s">Naveen kumar</h4>
+                <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Software Developer</p>
+                <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
+                  <li>
+                    <a class="fab fa-linkedin" href="https://www.linkedin.com/in/naveennetwork" target="_blank"></a>
+                  </li>
+                  <li>
+                    <a class="fab fa-youtube" href="https://www.youtube.com/channel/UCGzbs7y8w_k6PX8C11yQsdg/playlists" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Hero Area End -->
+
+    </header>
+    <!-- Header Area wrapper End -->
+
+    {% if name %}
+    	<br><br>
+		<center>
+			<h3>Thanks.. We've Recieved your mail</h3>
+		</center>
+		<br><br><br><br><br>
+	{% else %}
+
+    
+    <!-- About Section Start -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
+              <h3>Hi Guys!</h3>
+			  <br>
+              <p>Hi there, I’m Naveen kumar! a Software Developer. I have passion in Creating Automation Frameworks, Building Networking tools and Teaching. Developed Couple of Network Automation Frameworks, worked on SD-WAN, SDN, Ansible Network Automation, Python and Django.
+Drop me a line anytime, whether its about project, collaboration, feedback – I’d love to hear from you.</p>
+            </div>
+          </div>   
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="section-padding">      
+      <div class="contact-form">
+        <div class="container">
+          <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">          
+            <div class="col-md-6 col-lg-6 col-sm-12">
+              <div class="contact-block">
+                <h2>Contact Form</h2>
+                <form id="contactForm" action="{% url 'contact' %}" method="post">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                      </div>                                 
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" placeholder="Email" name="email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                        <div class="help-block with-errors"></div>
+                      </div> 
+                    </div>
+                     <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="text" placeholder="Subject" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group"> 
+                        <textarea class="form-control" name="message" id="message" placeholder="Your Message" rows="5" data-error="Write your message" required></textarea>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="submit-button">
+                        <button class="btn btn-common" id="submit" type="submit">Send Message</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div> 
+                        <div class="clearfix"></div> 
+                      </div>
+                    </div>
+                  </div>            
+                </form>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6 col-sm-12">
+              <div class="footer-right-area wow fadeIn">
+                <h2>Contact Address</h2>
+                <div class="footer-right-contact">
+                  <div class="single-contact">
+                    <div class="contact-icon">
+                      <i class="fa fa-map-marker"></i>
+                    </div>
+                    <p>Banglore, India</p>
+                  </div>
+                  <div class="single-contact">
+                    <div class="contact-icon">
+                      <i class="fa fa-envelope"></i>
+                    </div>
+                    <p><a href="mailto:youtoonaveen@gmail.com">youtoonaveen@gmail.com</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+            <br><br><br>
+            <object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.655367490582!2d77.66038522922693!3d12.993880816493997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1136112e46d9%3A0xdad31c0d64247f85!2sPyramid%20Valley%2C%20Sadanandanagar%2C%20Bennigana%20Halli%2C%20Bengaluru%2C%20Karnataka%20560033!5e0!3m2!1sen!2sin!4v1605606039698!5m2!1sen!2sin"></object>
+            </div>
+          </div>
+        </div>
+      </div>   
+    </section>
+    <!-- Contact Section End -->
+
+    {% endif %}
+
+    <!-- Footer Section Start -->
+    <footer class="footer-area section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
+              <ul class="social-icon">
+                <li>
+                  <a class="fab fa-linkedin" href="https://www.linkedin.com/in/naveennetwork" target="_blank"></a>
+                </li>
+                <li>
+                  <a class="fab fa-youtube" href="https://www.youtube.com/channel/UCGzbs7y8w_k6PX8C11yQsdg/playlists" target="_blank"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="icon-arrow-up"></i>
+    </a>
+
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'my_dashboard_app/js/jquery-min.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/popper.min.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/jquery.mixitup.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/wow.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/jquery.nav.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/jquery.easing.min.js' %}"></script>  
+    <script src="{% static 'my_dashboard_app/js/nivo-lightbox.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/main.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/contact-form-script.min.js' %}"></script>
+    <script src="{% static 'my_dashboard_app/js/map.js' %}"></script>
+      
+  </body>
+  
+
+
+
+{% endblock %}

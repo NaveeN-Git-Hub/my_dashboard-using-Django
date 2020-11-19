@@ -1,0 +1,138 @@
+
+.side-view1{
+	background-color: #42526C;
+	border: 1px;
+	margin-left: 2%;
+	margin-right: 78%;
+	margin-top: -13%;
+	height: 1200px;
+	box-sizing: border-box;
+}
+
+.photo img{
+	width: 35%;
+	margin-top: 65px;
+	margin-left: 90px;
+	border-radius: 10%;
+}
+
+.side-head{
+	margin-top: 45px; 
+	margin-left: 82px;
+}
+
+.side-head h6{
+	color: white;
+	text-transform: capitalize;
+	font-size: 20px;
+	font-family: "Lucida Console", Courier, monospace;
+	margin-left: -50px;
+	font-weight: lighter;
+}
+.horizontal_line{
+	margin-left:-50px;
+	margin-right: 65px;
+	margin-top: -35px;
+	color: white;
+	font-weight: 10px;
+}
+
+.contact-lines{
+	margin-left: -50px;
+	margin-top: 25px;
+	color: white;
+	line-height: 1.8;
+}
+
+
+.skills-lines{
+	margin-left: -50px;
+	margin-top: 25px;
+	color: white;
+	line-height: 1.8;
+}
+.skills-lines p span{
+	background-color: gray;   /* #009ACD; */
+}
+
+.languages-lines{
+	margin-left: -50px;
+	margin-top: 25px;
+	color: white;
+	line-height: 1;
+}
+
+.hobbies-lines{
+	margin-left: -50px;
+	margin-top: 25px;
+	color: white;
+	line-height: 1.8;
+}
+
+
+.top-name{
+	border: 1px; 
+	background-color: #009ACD;
+	margin-top: 3%; 
+	width: 100%;
+	padding: 10px;
+	margin-left: -3%;
+	font-family: "Lucida Console", Courier, monospace;
+}
+
+.top-name h1{
+	text-align: center;
+	color: white;
+	font-size: 38px;
+}
+
+.box-1 { 
+	background-color: white;
+	border: 5px;
+	margin-left: 25%;
+	margin-right: 10%;
+	margin-top: -76%;
+}
+
+.horizontal_line2{
+	margin-right: 15%;
+	margin-top: 4%;
+	height: 4px;
+	border: none;
+	background-color: grey;
+	font-weight: 20px;
+}
+
+.box-1 p{
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 16px;
+}
+
+.box-1 h3{
+	color: #42526C;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: "Lucida Console", Courier, monospace;
+	margin-top: 3%; 
+	line-height: 1.5;
+}
+
+.education{
+	color: #42526C;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: "Lucida Console", Courier, monospace;
+}
+
+.small{
+	font-weight: lighter;
+}
+
+.year{
+	color: #42526C;
+	text-transform: capitalize;
+	font-size: 18px;
+	font-family: "Lucida Console", Courier, monospace;
+	margin-left: 280px;
+}

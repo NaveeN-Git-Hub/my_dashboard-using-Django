@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Web CV Generator{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="{% static 'web_cv_generator_app/css/profile.css' %}">
+
+
+<div class="container">
+
+  <div class="row m-5">
+     <div class="col-md-10" id="head">
+       <h2>CV Generator</h2>   
+       <hr>
+       <br>      
+     </div>
+
+    <div>
+      <a href="{%url 'profiles_list' %}"><h6 class="fa fa-download"> Download CV</h6></a>
+    </div>
+
+     <div class="col-md-12" id="note">
+       <h4>Please fill your details</h4>         
+     </div>
+
+  </div>
+
+
+
+  
+  
+  <dir class="web_cv_photo">
+    <img src="{% static 'web_cv_generator_app/images/web_cv_photo.jpg' %}">
+  </dir>
+
+
+  <div class="row m-5">
+    <div class="col-md-9">
+      <form method="POST" id="resume">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Ex: Kevin" required>
+        </div>
+
+        <div class="form-group">
+          <label for="">Phone</label>
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="Ex: 9788688086">
+        </div>
+
+        <div class="form-group">
+          <label for="">Email</label>
+          <input type="text" class="form-control" id="email" name="email" placeholder="Ex: yourmail@gmail.com">
+        </div>
+
+        <div class="form-group">
+          <label for="">Your Place</label>
+          <input type="text" class="form-control" id="your_place" name="your_place" placeholder="Ex: London, UK">
+        </div>
+
+        <div class="form-group">
+          <label for="">Blog</label>
+          <input type="text" class="form-control" id="blog" name="blog" placeholder="Ex: https://naveennetwork.com">
+        </div>
+
+        <div class="form-group">
+          <label for="">Skills</label>
+          <textarea type="text" class="form-control" id="skills" name="skills" placeholder="Enter Skills sepearated with comma"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="">Summary</label>
+          <textarea type="text" class="form-control" id="summary" name="summary" placeholder="Write down a professional summary or a resume objective."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="">Languages</label>
+          <textarea type="text" class="form-control" id="languages" name="languages" placeholder="Enter Languages sepearated with comma"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="">Hobbies</label>
+          <textarea type="text" class="form-control" id="hobbies" name="hobbies" placeholder="Enter Hobbies sepearated with comma"></textarea>
+        </div>
+
+        <br>
+        <h6>Education</h6>
+        <hr>
+        <div class="form-group">
+          <label for="">School-Name</label>
+          <input type="text" class="form-control" id="school_name" name="school_name" placeholder="Ex: Hyderabad Public School">
+        </div>
+
+        <div class="form-group">
+          <label for="">School-Board</label>
+          <input type="text" class="form-control" id="school_board" name="school_board" placeholder="Ex: CBSE, India">
+        </div>
+
+        <div class="form-group">
+          <label for="">School-Year</label>
+          <input type="text" class="form-control" id="school_year" name="school_year" placeholder="Ex: 2010-2012">
+        </div>
+
+
+        <br>
+        <div class="form-group">
+          <label for="">Degree-Name</label>
+          <input type="text" class="form-control" id="degree_name" name="degree_name" placeholder="Ex: Bachelor of Engineering(BE)">
+        </div>
+
+        <div class="form-group">
+          <label for="">Degree-University</label>
+          <input type="text" class="form-control" id="degree_university" name="degree_university" placeholder="Ex: MIT, India">
+        </div>
+
+        <div class="form-group">
+          <label for="">Degree-Year</label>
+          <input type="text" class="form-control" id="degree_year" name="degree_year" placeholder="Ex: 2012-2016">
+        </div>
+        <br>
+
+
+        <br>
+        <h6>Experience</h6>
+        <hr>
+        <div class="form-group">
+          <label for="">Experience-1-Role</label>
+          <input type="text" class="form-control" id="experience1_role" name="experience1_role" placeholder="Ex: Software Developer">
+          <label for="">Experience-1-Company</label>
+          <input type="text" class="form-control" id="experience1_company" name="experience1_company" placeholder="Verizon, Bangalore">
+          <label for="">Experience-1-Year</label>
+          <input type="text" class="form-control" id="experience1_year" name="experience1_year" placeholder="2019-Present">
+          <label for="">Experience-1-summary</label>
+          <textarea type="text" class="form-control" id="experience1_summary" name="experience1_summary" placeholder="Describe your responsibilities and achievements"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="">Experience-2-Role</label>
+          <input type="text" class="form-control" id="experience2_role" name="experience2_role" placeholder="Ex: Software Engineer">
+          <label for="">Experience-2-Company</label>
+          <input type="text" class="form-control" id="experience2_company" name="experience2_company" placeholder="Palo atlo Networks, Dallas">
+          <label for="">Experience-2-Year</label>
+          <input type="text" class="form-control" id="experience2_year" name="experience2_year" placeholder="2016-2019">
+          <label for="">Experience-2-summary</label>
+          <textarea type="text" class="form-control" id="experience2_summary" name="experience2_summary" placeholder="Describe your responsibilities and achievements"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="">Experience-3-Role</label>
+          <input type="text" class="form-control" id="experience3_role" name="experience3_role" placeholder="Ex: Software Tester">
+          <label for="">Experience-3-Company</label>
+          <input type="text" class="form-control" id="experience3_company" name="experience3_company" placeholder="Cisco, Dallas">
+          <label for="">Experience-3-Year</label>
+          <input type="text" class="form-control" id="experience3_year" name="experience3_year" placeholder="2014-2016">
+          <label for="">Experience-3-summary</label>
+          <textarea type="text" class="form-control" id="experience3_summary" name="experience3_summary" placeholder="Describe your responsibilities and achievements"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="">Experience-4-Role</label>
+          <input type="text" class="form-control" id="experience4_role" name="experience4_role" placeholder="Ex: Intern">
+          <label for="">Experience-4-Company</label>
+          <input type="text" class="form-control" id="experience4_company" name="experience4_company" placeholder="Google, Bangalore">
+          <label for="">Experience-4-Year</label>
+          <input type="text" class="form-control" id="experience4_year" name="experience4_year" placeholder="2010-2014">
+          <label for="">Experience-4-summary</label>
+          <textarea type="text" class="form-control" id="experience4_summary" name="experience4_summary" placeholder="Describe your responsibilities and achievements"></textarea>
+        </div>
+        <br>
+        <!--<h6>Choose Photo to Upload</h6>
+        <hr>-->
+        <!--
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.media }}
+          <p><input id="image" type="file" class="" name="image"></p>
+          <br>
+          <br><br>
+          <center><button type="submit" class="btn btn-secondary">Submit</button></center>  
+        </form> -->
+        
+        <!-- <label for="img">Select image:</label>
+        <input type="file" id="img" name="img" accept="image/*">  -->
+        <center><button type="submit" class="btn btn-primary" onclick="myFunction()">Submit</button></center> 
+        
+         
+      </form>
+
+    </div>
+    
+  </div>
+  
+</div>
+
+
+<script>
+
+function myFunction(a) {
+  var name = document.getElementById('name').value;
+  if (name){
+    alert("Succesfully Submitted!");
+  }
+  else{
+    return false;
+  }
+  
+}
+</script>
+
+{% endblock %}

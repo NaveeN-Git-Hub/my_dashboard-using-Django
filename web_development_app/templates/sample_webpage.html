@@ -1,0 +1,76 @@
+
+{% load static %}  <!-- This is Load the static files in Django -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My SD-WAN WebSite</title>
+	<link rel="stylesheet" href="{% static 'web_development/css/style_webpage.css' %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<div class="container">
+		<div class="above_menu">
+			<ul>
+				<li>Contact us</li>
+				<li class="signup_login_btn">Signup/Login</li>
+			</ul>
+		</div>
+		<div class="menu">
+			<ul>
+				<a href="http://naveennetwork.com/" target="_blank">
+					<li class="logo"><img src="{% static 'web_development/images/sdwan_logo.png' %}"></li>
+				</a>
+				<li class="active">Products</li>
+				<li>Solutions</li>
+				<li>Customers</li>
+				<li>About us</li>
+			</ul>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="app-text">
+			<h1 class="our_products">Our Products</h1><br>
+			<h3 class="products_first_para">We provide products to fit your networking and security needs. Whether you are a large enterprise, a service provider, or an organization running with a lean IT team, we have a solution for you.</h3><br>
+			<p>Our products integrate a comprehensive set of networking and security functions through the Versa Operating System (VOS™) delivering SD-WAN, analytics, security, and routing. Built to run in the most complex environments, our products provide the flexibility and elasticity for easy, highly scalable, and secure deployments.</p>
+			<div class="play-btn">
+				<div class="play-btn-inner"><i class="fa fa-play-circle"></i></div>
+				<small><b>LEARN MORE</b></small>
+			</div>
+		</div>
+		<div class="product-pic">
+			<img src="{% static 'web_development/images/sdwan_pict.png' %}">
+		</div>
+		<center>
+			<div class="sdwan-pic2">
+				<img src="{% static 'web_development/images/sdwan_2.PNG' %}">
+			</div>
+		</center>
+		<div class="products">
+			<center><h2>Our SD-WAN Products</h2></center>
+			<div class="column" style="background-color:#aaa;">
+				<h3>Endpoint</h3>
+				<p>User-friendly systems and clients that deliver the full scope of the Versa platform right to your device</p>
+			</div>
+			<div class="column" style="background-color:#aaa;">
+				<h3>Access Points</h3>
+				<p>Easy-to-configure hardware solutions that deliver the right speed and performance for your needs</p>
+			</div>
+			<div class="column" style="background-color:#aaa;">
+				<h3>Management and Control</h3>
+				<p>One single-pane-of-glass for robust administration, policy configuration, access control, analytics, and automation</p>
+			</div>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br>
+		<div class="quick-links">
+			<ul>
+				<li><i class="fa fa-share-alt"></i><p>Share To</p></li>
+				<li><i class="fa fa-audio-description"></i><p>Recent News</p></li>
+				<li><i class="fa fa-cog"></i><p>Analytics</p></li>
+			</ul>
+	    </div>
+	</div> 
+
+</body>
+</html>

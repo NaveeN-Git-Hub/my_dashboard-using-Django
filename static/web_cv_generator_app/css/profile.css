@@ -1,0 +1,22 @@
+.container{
+	width: 70%;
+	height: 80%;
+}
+
+
+.web_cv_photo{
+	float: right;
+	max-width:100%;
+	margin-top: -60px;
+	margin-right: 18px;
+}
+
+
+
+#head{
+	color: green;
+}
+
+#note{
+	color: orange;
+}

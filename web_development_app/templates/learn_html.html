@@ -1,0 +1,336 @@
+<center><strong>Note:</strong> To View the HTML File, Right Click on WebPage + Save as HTML</center>
+{% load static %}  <!-- This is Load the static files in Django -->
+<!--This is for Commenting-->
+<!-- Note: In HTML, We can't add functionality, to make it work, need to use some other Programming Languages like Python, Java etc., -->
+
+
+<!DOCTYPE html> <!-- This line tells the browser that what type of following HTML lines are written in. "<!DOCTYPE html>" is HTML5 -->
+<html>  <!-- Hint: Enter tag+Tab to Autofill tags -->
+	<head>
+		<!-- Title of Tab -->
+		<title>HTML Cheat Sheet</title>  
+	</head>
+	<body>
+		<!-- Headings -->
+		<h1>Heading One</h1>
+		<h2>Heading Two</h2>
+		<h3>Heading Three</h3>
+		<h4>Heading Four</h4>
+		<h5>Heading Five</h5>
+		<h6>Heading Six</h6>
+
+		<!-- Hint: Press Ctr+u in the browser to view this Source Code -->
+		<!-- 'hr' Horizontal Row...Which draws the Horizontal Row -->
+		<hr>
+		<!-- 'br' is New Line -->
+		<br>
+
+
+		<!-- Paragraphs -->
+		<h3>Paragraph</h3>
+
+
+		<p> <!-- To Autofill some random paragraph, Enter lorem+tab... -->
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et <strong>dolore magna aliqua.</strong> Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. <em>Duis aute irure dolor</em> in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<p> <!-- 'href' is a Link can be taken from Local or Internet -->
+			This is Second Paragraph. 
+		</p>
+
+
+
+
+		<!-- Add Links with tag - 'a' -->
+		<!-- 'href' is a Link can be taken from Local or Internet -->
+		<!-- target='_blank' whch redirects to New Page -->
+		<p>
+			Let us see some example on how to add Text as link. Few Examples are<br>
+			Text as link with empty link<br>
+			Ex: <a href="" >nnetwork</a> <br>
+			Text as link with Some Local link, which redirects in the same page<br>
+			Ex: <a href="{% url 'nnetwork_html'%}">nnetwork</a> <br>
+			Text as link with Some Local link, which redirects in the New page<br>
+			Ex: <a href="{% url 'nnetwork_html'%}" target="_blank">nnetwork</a><br>
+			Text as link with Some Internet link, which redirects in the New page<br>
+			Ex: <a href="http://naveennetwork.com" target="_blank">nnetwork</a><br><br>
+		</p>
+
+		
+		<hr>
+
+		<!-- Lists -->
+		<!-- Two types of Lists. unordered List(ul) and Ordered List(ol) -->
+		<!-- 'li' is List item -->
+		<h3>Lists</h3>
+
+		<ul>
+			<li>List Item1</li>
+			<li>List Item2</li>
+			<li>List Item3</li>
+		</ul>
+		
+		<ol>
+			<li>List Item1</li>
+			<li>List Item2</li>
+			<li>List Item3</li>
+		</ol>
+
+
+		<br>
+		<hr>
+
+
+
+		<!-- Table -->
+		<!-- 'tr' is Row -->
+		<!-- 'th' is Heading Name -->
+		<!-- 'td' is Data -->
+		<h3>Table</h3>
+
+
+		<table> 
+			<thead>  <!-- heading of table -->
+				<tr> 
+					<th>Name</th>  
+					<th>Email</th>
+					<th>Phone</th>
+				</tr>
+			</thead>
+			<tbody> <!-- Body of Table -->
+				<tr>
+					<td>John</td>  
+					<td>john@gmail.com</td>
+					<td>8490729642</td>
+				</tr>
+				<tr>
+					<td>Brad</td>
+					<td>brad@gmail.com</td>
+					<td>7776387223</td>
+				</tr>
+				<tr>
+					<td>wen</td>
+					<td>ahouki@gmail.com</td>
+					<td>9987389724</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br>
+		<hr>
+
+
+
+
+		<!-- Forms with Buttons
+		An HTML form is used to collect user input. The user input is most often sent to a server for processing. 
+		'action' attribute defines where to send the form data when a form is submitted in an HTML document. It Could be URL/some.php etc.,
+		'method' attribute of the form element tells the web browser how to send form data to a server. Specifying a value of POST means the browser will send the data to the web server to be processed.
+		-->
+		<h3>Forms</h3>
+		<br>
+
+
+		<form action="#", method="POST">
+			<label>First Name</label>  <!-- 'label' is Name of Label --> 
+			<input type="text" name="firstName", placeholder="Enter First Name">  <!-- 'input' is Input field and 'type' is What type of Value is ? and 'name' is Used in the server side to get value. -->
+			<label>Last Name</label>
+			<input type="text" name="lastName", placeholder="Enter Last Name"> <!-- 'placeholder' is description for input field what to enter -->
+		</form>
+
+		<!-- Here are the different input types you can use in HTML:
+		<input type="text">
+		<input type="button">
+		<input type="email">
+		<input type="checkbox">
+		<input type="radio"> 
+		<input type="date">
+		<input type="password">
+		<input type="submit">
+		etc., Refer https://www.w3schools.com/html/html_form_input_types.asp 
+		Note: The default value of the type attribute is "text"  and every input type has its own function
+		For Ex: <input type="email">, this type will adds the little bit validation without running Javascript 
+				<input type="password">, this type the characters in a password field are masked (shown as asterisks or circles) without running Javascript 
+		-->
+		<!-- for 'value' 
+		 The value attribute is used to set the value of <input> element and the value in the name/value pair that is sent to the server on form submission. The value attribute behaves slightly differently depending on the input type. 
+		 In Short, input attribute is Pre-defined Value to our input
+		 Refer ...https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_input_value 
+		-->
+
+		<br>
+
+		<form  action="{% url 'blog_html'%}" method="POST"> <!-- action="process.php" -->
+			{% csrf_token %}
+			<div>  <!-- 'div' is Block Level Element. This will put it in Next Line -->
+				<label>First Name</label>
+				<input type="text" name="firstName", placeholder="Enter First Name">
+			</div>
+			<br>
+
+
+			<div>
+				<label>Last Name</label>   <!-- Text Field -->
+				<input type="text" name="lastName", placeholder="Enter Last Name">
+			</div>
+			<br>
+
+
+			<div>
+				<label>Email</label>   <!-- Email -->
+				<input type="email" name="email", placeholder="Enter Email address">
+			</div>
+			<br>
+
+
+			<div>
+				<label>Password</label>  <!-- Password -- >
+				<input type="password" name="password", placeholder="Enter Password">
+			</div>
+			<br>
+
+
+			<div>
+				<label>Message</label>
+				<textarea name="message"></textarea>  <!-- Text Area -->
+			</div>
+			<br>
+
+
+			<div>
+				<label>Country</label>
+				<select name='country'>  		<!-- Dropdown use 'option' -->
+					<option value="india">India</option>		
+					<option value="australia">Australia</option>
+					<option value="us">US</option>
+				</select>
+			</div>
+			<br>
+
+
+			<div>
+				<label>Age</label>
+				<input type="number" name="age" value="5">  <!-- Refer this input to understand input tag & value attribute -->
+			</div>
+			<br>
+
+
+			<div>
+				<label>Date of Birth</label>    <!-- Date of Birth -->
+				<input type="date" name="birthday">
+			</div>
+			<br>
+
+
+			<p>Gender:</p>   					<!-- Radio Button -->
+			<input type="radio" name="gender" value="Male">
+			<label>Male</label><br>
+			<input type="radio" name="gender" value="Female">
+			<label>Female</label><br>
+			<input type="radio" name="gender" value="Other">
+			<label>Other</label><br>
+			<br>
+			<input type="submit" name="submit" value="Submit/OK">  <!-- Submit Button -->
+			<br><br>
+
+
+			<p>Select:</p>
+			<input type="checkbox" name="vehicle1" value="Bike">  <!-- CheckBox -->
+			<label>I have Bike</label><br>
+			<input type="checkbox" name="vehicle2" value="Car">
+			<label>I have Car</label><br>
+			<input type="checkbox" name="vehicle3" value="Cycle">
+			<label>I have Cycle</label><br><br>
+
+			<button>Click Me!</button>   <!-- Click Button -->
+			<br><br>
+		</form>
+
+
+		<hr>
+
+
+		<!-- Image  -->
+		<!-- Load Local image -->
+		<img src="{% static 'web_development/images/naveen.jpg' %}" alt="Its My Photo">
+		<!-- If image not found or not loaded then you can display description of image with alt as below -->
+		<img src="naveen1.jpg" alt="Its My Photo">
+		<!-- You can also wrap a Link. So that it will open new tab while pressing on the image -->
+		<a href="{% static 'web_development/images/naveen.jpg' %}">
+			<img src="{% static 'web_development/images/naveen.jpg' %}" alt="Its My Photo">
+		</a>
+		<br>
+		<!-- set width and height of photo.-->
+		<img src="{% static 'web_development/images/naveen.jpg' %}" alt="Its My Photo" width="300"><br><br>
+
+		<hr>
+
+
+		<!-- Quotations -->
+		<!-- Blockquote -->
+		<!-- The <blockquote> tag specifies a section that is quoted from another source. Browsers usually indent <blockquote> elements 
+		'cite' Specifies the source of the quotation. Using this Value gets the data quoted-->
+
+		<h4>Blockqoute</h4><br>
+
+		<blockquote cite="http://naveennetwork.com">
+			Network automation is the process of automating the configuration, management, operation & testing of physical and virtual devices within a network. With growing costs, complexity of networks and the daily emergence of bandwidth-hungry applications, networks cannot be managed manually. 
+		</blockquote><br>
+
+		<!-- When hover on nnetwork it displays the abbriavation of nnetwork-->
+		<h4>Abbrivation</h4>
+		<p>The <abbr title="NaveenNetwork">nnetwork</abbr> is Here!</p>
+
+		<!-- cite tag -->
+		<!-- It displays in Italic -->
+		<p><cite>HTML Crash Corse</cite> by Brad Traversy</p>
+
+		<br>
+		<hr>
+
+
+		<h3>HTML Block and Inline Element</h3>
+		<!--
+		Every HTML element has a default display value, depending on what type of element it is. 
+
+		There are two display values: 
+		Block-level Elements 
+		Inline Elements 
+
+		Block-level Elements
+		A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+		Ex: <div>
+		Here are the block-level elements in HTML:
+		<aside>  <table> <ul> <blockquote> etc.,
+
+		Inline Elements
+		An inline element does not start on a new line and it only takes up as much width as necessary.
+		Ex: <a>
+		Here are the inline elements in HTML:
+		<abbr> <br> <img> <strong> <label> <input>
+		
+
+		Refere..https://www.w3schools.com/html/html_blocks.asp
+		-->
+
+
+		<!-- HTML5 Semantic tags -->
+		<!--A semantic element clearly describe its meaning to both the browser and the developer -->
+		<a href="{% url 'blog_html'%}" target="_blank">Go to Blog</a>
+
+
+
+
+
+		<div style="margin-top:500px"></div>
+
+
+	</body>
+</html>
+
+
+<!-- Refer... https://www.w3schools.com/html/html_forms.asp -->

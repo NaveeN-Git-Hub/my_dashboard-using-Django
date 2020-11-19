@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}List of CVs{% endblock %}
+{% load static %}
+
+{% block content %}
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="{% static 'web_cv_generator_app/css/profiles_list.css' %}">
+
+
+<div class="container">
+	<div class=row-m-5>
+		<div class="col-md-12">
+			<h2 class="heading">List of CV's</h2>
+		</div>
+	</div>
+	<hr>
+	<br>
+	<div class="row" id="row-names">
+		<div class=col-md-4>
+			<h4>ID</h4>
+		</div>
+		<div class=col-md-4>
+			<h4>Name</h4>
+		</div>
+		<div class=col-md-4>
+			<h4>CV</h4>
+		</div>
+	</div>
+	<br>
+	{% for profile in profiles %}
+	<div class="row">
+		<div class=col-md-4>
+			{{ profile.id }}
+		</div>
+		<div class=col-md-4>
+		{{ profile.name }}
+		</div>
+		<div class=col-md-4>
+			<a href="/{{profile.id}}" class="btn btn-info">Download CV</a>
+		</div>	
+	</div>
+	<br>
+	{% endfor %}
+</div>
+
+
+{% endblock %}
