@@ -10,7 +10,7 @@ import time
 
 # Create your views here.
 def profile(request):
-	print("I am in views.py-profile")
+		
 	if request.method == "POST":
 		name = request.POST.get("name", "")
 		phone = request.POST.get("phone", "")
@@ -100,7 +100,8 @@ def resume(request,id):
 		'javascript-delay':5000,
 		'enable-local-file-access': None,
 	}
-	pdf = pdfkit.from_string(html,False,options)
+	pdfkit_config = pdfkit.configuration(wkhtmltopdf='/usr/local/bin/wkhtmltopdf')
+	pdf = pdfkit.from_string(html,False,options,configuration=pdfkit_config)
 	response = HttpResponse(pdf,content_type='application/pdf')
 	response['Content-Disposition'] ='attachment'; 
 	filename = str(user_profile.id) + "_" + user_profile.name + "_resume.pdf"
