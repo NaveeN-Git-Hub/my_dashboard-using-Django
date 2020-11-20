@@ -10,6 +10,7 @@ import time
 
 # Create your views here.
 def profile(request):
+	print("I am in views.py-profile")
 	if request.method == "POST":
 		name = request.POST.get("name", "")
 		phone = request.POST.get("phone", "")
@@ -67,6 +68,7 @@ def profile(request):
 
 
 def resume(request,id):
+	print("I am in views.py-resume")
 	user_profile = Profile.objects.get(pk=id)
 
 	template = loader.get_template('resume.html')
@@ -106,5 +108,6 @@ def resume(request,id):
 	return response
 
 def profiles_list(request):
+	print("I am in views.py-profiles_list")
 	profiles = Profile.objects.all()
 	return render(request, 'profiles_list.html', {'profiles': profiles})

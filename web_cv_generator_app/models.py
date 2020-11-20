@@ -5,7 +5,7 @@ from django.db import models
 # of that specific user
 
 class Profile(models.Model):
-
+	print("I am in models.py-Profile")
 	name = models.CharField(max_length=100, blank=False) # , default='anonymous', editable=True
 	phone = models.CharField(max_length=100)
 	email = models.CharField(max_length=100)
@@ -47,7 +47,7 @@ class Profile(models.Model):
 	experience4_summary = models.TextField(max_length=2000, null=True, blank=True)
 
 	# Photo
-	photo = models.ImageField(null=True, blank=True, upload_to='images/', default='web_cv_photo.jpg')  # install it using 'python -m pip install Pillow'
+	#photo = models.ImageField(null=True, blank=True, upload_to='images/', default='web_cv_photo.jpg')  # install it using 'python -m pip install Pillow'
 	
 	"""
 	# once you've written the above Text fields then to create a table in db execute following commands

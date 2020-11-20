@@ -146,8 +146,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # media root path for the MEDIA_UR
 #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Email Settings
+#EMAIL_HOST = 'smtp.office365.com'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587 
+#EMAIL_HOST = 'https://outlook.office.com/POP.AccessAsUser.All'
+EMAIL_PORT = 587
 EMAIL_HOST_USER = config('EMAIL_HOST_USER') # from this account sending the mail ids mentioned in the views.py
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
