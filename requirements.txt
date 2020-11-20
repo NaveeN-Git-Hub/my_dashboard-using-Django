@@ -11,4 +11,3 @@ pytz==2020.1
 sqlparse==0.4.1
 whitenoise==5.2.0
 wkhtmltopdf-pack-ng==0.12.3.0
-pdfkit==0.6.0
