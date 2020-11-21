@@ -66,6 +66,10 @@ def profile(request):
 
 	return render(request, 'profile.html')
 
+import sys
+import subprocess
+
+
 
 def resume(request,id):
 	print("I am in views.py-resume")
@@ -100,7 +104,14 @@ def resume(request,id):
 		'javascript-delay':5000,
 		'enable-local-file-access': None,
 	}
-	pdfkit_config = pdfkit.configuration(wkhtmltopdf=settings.WKHTMLTOPDF_CMD)
+
+
+	os.environ['PATH'] += os.pathsep + os.path.dirname(sys.executable)  
+	WKHTMLTOPDF_CMD = subprocess.Popen(['which', os.environ.get('WKHTMLTOPDF_BINARY', 'wkhtmltopdf')], 
+		stdout=subprocess.PIPE).communicate()[0].strip()
+
+
+	pdfkit_config = pdfkit.configuration(wkhtmltopdf=WKHTMLTOPDF_CMD)
 	pdf = pdfkit.from_string(html,False,options, configuration=pdfkit_config)
 	response = HttpResponse(pdf,content_type='application/pdf')
 	response['Content-Disposition'] ='attachment'; 
