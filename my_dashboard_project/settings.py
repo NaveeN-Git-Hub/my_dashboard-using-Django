@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import sys
+import subprocess
 import django_heroku
 import dj_database_url
 from decouple import config  # to set the secrete values in .env file
