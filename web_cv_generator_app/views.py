@@ -100,8 +100,7 @@ def resume(request,id):
 		'javascript-delay':5000,
 		'enable-local-file-access': None,
 	}
-	pdfkit_config = pdfkit.configuration(wkhtmltopdf='/usr/local/bin/wkhtmltopdf')
-	pdf = pdfkit.from_string(html,False,options,configuration=pdfkit_config)
+	pdf = pdfkit.from_string(html,False,options)
 	response = HttpResponse(pdf,content_type='application/pdf')
 	response['Content-Disposition'] ='attachment'; 
 	filename = str(user_profile.id) + "_" + user_profile.name + "_resume.pdf"

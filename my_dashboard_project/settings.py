@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import sys
-import subprocess
 import django_heroku
 import dj_database_url
 from decouple import config  # to set the secrete values in .env file
@@ -159,15 +157,3 @@ EMAIL_USE_TLS = True
 
 
 django_heroku.settings(locals())
-
-WKHTMLTOPDF_CMD = '/usr/local/bin/wkhtmltopdf'
-WKHTMLTOPDF_CMD_OPTIONS = {
-    'quiet': True,
-}
-
-
-# Ensure virtualenv path is part of PATH env var
-os.environ['PATH'] += os.pathsep + os.path.dirname(sys.executable)  
-WKHTMLTOPDF_CMD = subprocess.Popen(
-    ['which', os.environ.get('WKHTMLTOPDF_BINARY', 'wkhtmltopdf')], # Note we default to 'wkhtmltopdf' as the binary name
-    stdout=subprocess.PIPE).communicate()[0].strip()
